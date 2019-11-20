@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Digite aqui o Asset do Equipamento"
+        android:hint="Digite aqui o ID do Equipamento"
         android:inputType="textPersonName"
         android:textColor="#0C0C0C"
         android:textColorHint="#FA0202"
