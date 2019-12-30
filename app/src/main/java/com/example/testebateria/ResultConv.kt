@@ -18,13 +18,24 @@ class ResultConv : AppCompatActivity() {
 
         //Button Q1
         if (nome == 1){
-
+            //Troca de activits em kotlin
             ID_KOTLIN.setOnClickListener {
-                val Q1 : String = "variavelBotao.setOnClickListener{" +
-                        "          val intent = Intent(this,activitydestino::class.java) " +
-                                   "startActivity(intent)}"
+                val Q1 : String = "    variavelBotao.setOnClickListener{"+
+                        " val intent = Intent(this,ActivityDestino::class.java)"+
+                        "startActivity(intent)"+
+                        "}"
                 ID_CAMPSAIDA.setText(Q1)
             }
+            //Troca de activits em Java
+            ID_JAVA.setOnClickListener {
+                val Q1 : String = "  private Button variavelBotao;"+
+                                  "  variavelBotao = findViewById(R.id.botaoDaTela);"+
+                                  "  variavelBotao.setOnClickListener(new View.OnClickListener(){"+
+                        "  public void onClick(View v){"+
+                        "  startActivity(new Intent(AtualActivity.this, ActivityDestino.class));"
+                ID_CAMPSAIDA.setText(Q1)
+            }
+
         }
 
     }
